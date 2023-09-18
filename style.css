@@ -1,53 +1,36 @@
-body{
-  background-color: #c9d1fb;;
-}
-table{
-  width: 1200px;
+.nav-container{
   color: white;
-  border-collapse: collapse;
-  text-align: center;
-  font-family:Arial, Helvetica, sans-serif;
-  height: 40px;
-  font-size: 20px;
-  background-color: white;
-}
-td{
-  padding: 20px 0;
-}
-thead td{
-  padding: 15px 0;
-}
-tbody tr:nth-child(2n){
-  background-color: #e9eaed;
-}
-thead{
-  background-color: #0f70eb;
-}
-tbody{
-  color: grey;
-}
-tbody td:first-of-type{
-  background-color: #4aa556;
-  color: white;
-  width: 410px;
+  font-family: sans-serif;
+  font-size: 0;
 }
 
-tbody tr:nth-child(2n) td:first-child{
-  background-color: #60d055;
+.list-item{
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px 15px;
+  background-color: orangered;
+  font-size: 1rem;
+  position: relative;
+
 }
-button{
-  background-color: #115db9;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
+.list-item:hover{
+  background-color: rgb(136, 55, 25);
 }
-p{
-  margin-bottom: 5px;
-  margin-top: 5px;
+.sub-list{
+  position: absolute;
+  display: none;
+  left: 0;
+  background-color: orangered;
+  top: 100%;
 }
-span{
-  font-weight: bold;
-  font-size: 24px;
+.sub-list-item{
+  box-sizing: border-box;
+  width: 100%;
+}
+.list-item:hover > .sub-list{
+  display: block;
+}
+.next-sub{
+  left: 100%;
+  top: 0;
 }

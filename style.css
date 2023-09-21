@@ -1,14 +1,36 @@
-p{
-  position: relative;
+.card{
+min-width: 15vw;
+max-width: 250px;
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+min-height: 300px;
+/* justify-content: space-around; */
+align-items: center;
+padding: 2em;
+box-sizing: border-box;
 }
-p::before{
-  position: absolute;
-  background-color: rgba(0, 0, 7, 0.514);
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  top: 1rem;
-  left: 50%;
+.user-img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 50%;
+
+}
+.user-name{
+font-size: 1.1em;
+font-weight: 800;
+margin: 2em 0 1em 0;
+}
+.position{
+font-size: 0.9em;
+color: gray;
+}
+.button{
+color: white;
+background-color: blue;
+border: none;
+padding: 0.8em 2.5em;
+border-radius: 3px;
+margin-top: auto;
 }

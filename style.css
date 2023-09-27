@@ -1,168 +1,68 @@
-:root {
-  --header-size: 10vh;
-}
-header {
-  width: 100vw;
-  height: var(--header-size);
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  box-sizing: border-box;
-  padding: 0 1em;
-  align-items: center;
-}
-.logo {
-  align-self: center;
-  height: 70%;
-}
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  position: relative;
-}
-.nav-item {
-  font-size: 1.5em;
-  padding: 1em;
-  margin: 0 20px;
-}
-.banner {
-  width: 100vw;
-  height: calc(100vh - var(--header-size));
-  background-image: url("./assets/Еверест.jpg");
-  background-repeat: no-repeat;
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/forest.jpg");
   background-size: cover;
-}
-.news {
   display: flex;
-  flex-wrap: wrap;
-  padding: 5vh 10vw;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 2em;
+  box-sizing: border-box;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+/* form * {
+  margin: 1em 2em;
+} */
+button {
+  flex-grow: 1;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  margin-top: 2em;
+}
+button:hover{
+  color: black;
+  background-color: rgba(253, 249, 249, 0.87);
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-weight: 800;
+  text-align: center;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin: 1em 0;
+  height: 3em;
+}
+div {
+  display: flex;
   justify-content: space-between;
 }
-.news-card {
-  width: 30%;
-  height: 20vh;
-  box-sizing: border-box;
-  margin: 1vh 1vw;
-  position: relative;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  transition: transform 1s;
+input {
+  background-color: transparent;
+  border:none;
+  border-bottom: 2px solid white;
+  width: 70%;
 }
-.nav-item::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1.5px;
-  background-color: rgb(3, 3, 3);
-  transition-duration: 500ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
-}
-.nav-item:hover::after {
-  width: 0;
-}
-h3{
-  font-size: 1.3em;
-  font-weight: bold;
-  z-index: 1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgb(206, 228, 243);
-  padding-top: 30px;
-  box-sizing: border-box;
-  color: #125074;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid black;
-  backface-visibility: hidden;
-}
-p{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #125074;
-  color: rgb(199, 245, 248);
-  padding: 30px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid black;
-}
-h3.one {
-  transform: rotateX(0deg);
-  transform-origin: top;
-  transition: all 3s;
-}
-.news-card:hover h3.one {
-  transform: rotateX(180deg) 
-}
-h3.two {
-  transform: rotateY(0deg);
-  transition: all 0.7s;
-}
-p.two {
-  transform: rotateY(-180deg);
-  transition: all 0.7s;
-}
-.news-card:hover p.two {
-  transform: rotateY(0deg);
-  z-index: 2;
-}
-.news-card:hover h3.two {
-  transform: rotateY(180deg);
-  z-index: -1;
-}
-h3.three {
-  transform: rotateX(0deg);
-  transition: all 0.7s;
-}
-p.three {
-  transform: rotateX(-180deg);
-  transition: all 0.7s;
-}
-.news-card:hover p.three {
-  transform: rotateX(0deg);
-  z-index: 2;
-}
-.news-card:hover h3.three {
-  transform: translateY(20px) rotateX(180deg);
-  z-index: -1;
-}
-h3.four {
-  transform: rotateY(0deg);
-  transform-origin: left;
-  transition: all 1.3s ease-in-out;
-}
-p.four {
-  transform: rotateY(-90deg);
-  transform-origin: left;
-  transition: all 1.3s ease-in-out;
-}
-.news-card:hover p.four {
-  transform: rotateY(0deg);
-  z-index: 2;
-}
-.news-card:hover h3.four {
-  transform: rotateY(270deg);
-  /* z-index: -1; */
-}
-h3.five {
-  transform: rotate(0deg);
-  transform-origin: left bottom;
-  transition: all 2s;
-}
-p.five {
-  transition: all 2s;
-}
-.news-card:hover h3.five {
-  transform: rotate(360deg) scale(0,0);
-}
-h3.six {
-  transform: rotate(0deg);
-  transition: all 3s;
-  backface-visibility: hidden;
-}
-.news-card:hover h3.six {
-  transform: rotate(360deg) scale(0,0);
+@media screen and (max-width: 700px){
+  form{
+    width: 80vw;
+  }
+  label{
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
